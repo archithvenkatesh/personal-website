@@ -19,18 +19,10 @@
     "tsparticles-slim": "^2.12.0",
     "react-intersection-observer": "^9.5.3",
     "react-scroll": "^1.9.0",
-    "react-tilt": "^1.0.0",
-    "react-parallax": "^3.5.1",
-    "react-reveal": "^1.2.2",
     "react-countup": "^6.5.0",
-    "react-spring": "^9.7.3",
     "react-use": "^17.4.2",
     "react-hot-toast": "^2.4.1",
-    "emailjs-com": "^3.2.0",
-    "three": "^0.158.0",
-    "@react-three/fiber": "^8.15.11",
-    "@react-three/drei": "^9.88.13",
-    "react-three-fiber": "^6.0.13"
+    "emailjs-com": "^3.2.0"
   },
   "devDependencies": {
     "typescript": "^5",
