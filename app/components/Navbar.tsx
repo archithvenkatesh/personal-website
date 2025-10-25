@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-scroll'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 const Navbar = () => {
@@ -50,16 +49,18 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
-                to={item.href}
-                smooth={true}
-                duration={500}
+                href={`#${item.href}`}
                 className="text-white hover:text-blue-400 transition-colors duration-300 cursor-pointer relative group"
+                onClick={(e) => {
+                  e.preventDefault()
+                  document.getElementById(item.href)?.scrollIntoView({ behavior: 'smooth' })
+                }}
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -83,16 +84,18 @@ const Navbar = () => {
         >
           <div className="px-2 pt-2 pb-3 space-y-1 bg-black/90 backdrop-blur-md rounded-lg mt-2">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
-                to={item.href}
-                smooth={true}
-                duration={500}
-                onClick={() => setIsOpen(false)}
+                href={`#${item.href}`}
+                onClick={(e) => {
+                  e.preventDefault()
+                  document.getElementById(item.href)?.scrollIntoView({ behavior: 'smooth' })
+                  setIsOpen(false)
+                }}
                 className="block px-3 py-2 text-white hover:text-blue-400 transition-colors duration-300 cursor-pointer"
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </div>
         </motion.div>
