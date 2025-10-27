@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter, FaChess } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa'
 import { useInView } from 'react-intersection-observer'
 import { useState } from 'react'
 import toast from 'react-hot-toast'

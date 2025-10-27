@@ -8,7 +8,6 @@ import Particles from 'react-particles'
 import { loadSlim } from 'tsparticles-slim'
 import { Engine } from 'tsparticles-engine'
 import { useInView } from 'react-intersection-observer'
-import { Link, Element, scroller } from 'react-scroll'
 
 // Components
 import Navbar from './components/Navbar'
@@ -124,34 +123,34 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <Element name="home">
+      <div id="home">
         <Hero />
-      </Element>
+      </div>
 
       {/* About Section */}
-      <Element name="about">
+      <div id="about">
         <About />
-      </Element>
+      </div>
 
       {/* Experience Section */}
-      <Element name="experience">
+      <div id="experience">
         <Experience />
-      </Element>
+      </div>
 
       {/* Skills Section */}
-      <Element name="skills">
+      <div id="skills">
         <Skills />
-      </Element>
+      </div>
 
       {/* Projects Section */}
-      <Element name="projects">
+      <div id="projects">
         <Projects />
-      </Element>
+      </div>
 
       {/* Contact Section */}
-      <Element name="contact">
+      <div id="contact">
         <Contact />
-      </Element>
+      </div>
 
       {/* Footer */}
       <Footer />

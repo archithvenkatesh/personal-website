@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 
+const inter = Inter({ subsets: ['latin'] })
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://archith-venkatesh.vercel.app'),
   title: 'Archith Venkatesh - Software Engineer & AI Researcher',
   description: 'Computer Science and Mathematics student at Georgia Tech. Software Engineer with experience in AI/ML, Full-Stack Development, and Data Science.',
   keywords: 'Archith Venkatesh, Software Engineer, AI Researcher, Georgia Tech, Computer Science, Mathematics, Machine Learning, Full Stack Developer',
@@ -32,8 +35,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="font-sans bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
+      <body className={`${inter.className} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen`}>
         {children}
+        <Analytics />
       </body>
     </html>
   )

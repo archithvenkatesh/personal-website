@@ -12,6 +12,7 @@
     "@fontsource-variable/inter": "^5.2.8",
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@types/react-scroll": "^1.8.10",
+    "@vercel/analytics": "^1.5.0",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^10.16.16",
     "next": "14.0.4",

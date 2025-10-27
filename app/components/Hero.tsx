@@ -184,14 +184,19 @@ const Hero = () => {
             <span>Download Resume</span>
           </motion.a>
 
-          <motion.button
+          <motion.a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault()
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+            }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:border-blue-400 hover:bg-blue-400/10 transition-all duration-300 flex items-center space-x-2"
+            className="group border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:border-blue-400 hover:bg-blue-400/10 transition-all duration-300 flex items-center space-x-2 cursor-pointer"
           >
             <FaEnvelope className="group-hover:animate-pulse" />
             <span>Get In Touch</span>
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         {/* Social Links */}
