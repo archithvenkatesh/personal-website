@@ -3,11 +3,10 @@
 import { useState, useEffect } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaChess, FaCode, FaBrain, FaRocket } from 'react-icons/fa'
-import { SiPython, SiJavascript, SiReact, SiNodedotjs, SiTensorflow, SiPytorch, SiJava, SiCsharp, SiGooglecloud } from 'react-icons/si'
+import { SiPython, SiJavascript, SiReact, SiNodedotjs, SiTensorflow, SiPytorch, SiCsharp, SiGooglecloud } from 'react-icons/si'
 import Particles from 'react-particles'
 import { loadSlim } from 'tsparticles-slim'
 import { Engine } from 'tsparticles-engine'
-import Typed from 'react-typed'
 import { useInView } from 'react-intersection-observer'
 import { Link, Element, scroller } from 'react-scroll'
 
@@ -160,8 +159,7 @@ export default function Home() {
       {/* Scroll Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 z-50"
-        style={{ scaleX: scrollYProgress }}
-        transformOrigin="0%"
+        style={{ scaleX: scrollYProgress, transformOrigin: '0% 50%' }}
       />
     </main>
   )
